@@ -7,7 +7,7 @@ const InputEmpresa = ({ label, info }) => {
       <div className='text-base w-full '>
         <input
           readOnly
-          className='text-base w-full pl-2 font-bold focus:outline-none'
+          className=' text-base w-full pl-2 font-bold focus:outline-none'
           type='text'
           id='infoemp'
           name='infoEmpresa'

@@ -4,14 +4,16 @@ import router from 'next/router';
 import NextImage from 'next/image';
 import { useState } from 'react';
 import safeJsonStringify from 'safe-json-stringify';
-import { prisma } from 'pages/api/graphql';
 import { gql } from 'apollo-server-core';
 import { useEffect } from 'react';
+import { prisma } from 'pages/api/graphql';
 
 export async function getServerSideProps() {
   let enterprises;
+  console.log('entró');
   try {
     enterprises = await prisma.enterprise.findMany();
+    console.log('empresas: ', enterprises);
   } catch (e) {}
   return {
     props: {

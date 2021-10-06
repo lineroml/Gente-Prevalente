@@ -6,6 +6,15 @@ module.exports = {
       sansSerif: ['Roboto'],
     },
     extend: {
+      keyframes: {
+        fadeIn: {
+          '0%': { transform: ' translateY(5%)', opacity: 0 },
+          '100%': { transform: 'translateY(0%))', opacity: 1 },
+        },
+      },
+      animation: {
+        fadeIn: 'fadeIn 0.7s ease-in-out',
+      },
       fontSize: {
         med: '20px',
         pdfdesc: '9px',

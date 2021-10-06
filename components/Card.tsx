@@ -7,7 +7,7 @@ const Card = ({ source, titulo, minitext, ruta }) => {
   return (
     <div
       onClick={() => router.push(`${ruta}`)}
-      className='cursor-pointer group lg:h-full w-full cardanimation group h-36 flex bg-white rounded-2xl relative flex-col'
+      className='animate-fadeIn cursor-pointer group lg:h-full w-full cardanimation group h-36 flex bg-white rounded-2xl relative flex-col'
     >
       <div className='block -mt-6 lg:h-cardIcon iconcardanim lg:w-cardIcon h-cardIconMob w-cardIconMob absolute pl-6'>
         <NextImage src={source} layout='responsive' width='108' height='108'></NextImage>

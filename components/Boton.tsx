@@ -22,8 +22,6 @@ const mutacion = gql`
 const Boton = ({ aceptar, label, empresa, setEmpresas, isDisabled }) => {
   const [mutationUpdateApproved, { loading, error }] = useMutation(mutacion);
   const { enqueueSnackbar } = useSnackbar();
-  console.log('Empresa: ', empresa);
-  console.log('idDisabled: ', isDisabled);
 
   const changeState = async (e: any, type: String) => {
     e.preventDefault();
@@ -43,7 +41,6 @@ const Boton = ({ aceptar, label, empresa, setEmpresas, isDisabled }) => {
     });
 
     if (!error) {
-      console.log('exito');
       const empresaUpdate = res.data.updateEnterprise;
       setEmpresas((prevState) => [
         ...prevState.slice().map((item) => {
@@ -59,7 +56,6 @@ const Boton = ({ aceptar, label, empresa, setEmpresas, isDisabled }) => {
         }
       );
     } else {
-      console.log('falló');
       enqueueSnackbar('Se ha producido un error.', {
         variant: 'error',
       });
@@ -78,9 +74,17 @@ const Boton = ({ aceptar, label, empresa, setEmpresas, isDisabled }) => {
       } h-botonAceptar flex w-botonAceptar  bg-white shadow-botonAceptar hover:shadow-xl rounded-2xl`}
     >
       <div className='flex h-full'>
-        <div className='flex pl-3'>
+        <div className={`${loading ? 'hidden' : 'flex'} pl-3`}>
           <NextImage
             src={`/img/${aceptar ? 'aceptar' : 'rechazar'}.svg`}
+            width='30'
+            height='34'
+          ></NextImage>
+        </div>
+        <div className={`${loading ? 'flex' : 'hidden'} pl-3`}>
+          <NextImage
+            className='animate-spin'
+            src={`/img/spin.svg`}
             width='30'
             height='34'
           ></NextImage>

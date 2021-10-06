@@ -9,7 +9,7 @@ const FormEmpresa = ({ empresa, setEmpresas }) => {
   const [modalOn, setModalOn] = useState(false);
 
   return (
-    <div className='w-full h-full flex justify-center items-center'>
+    <div className='animate-fadeIn w-full h-full flex justify-center items-center'>
       <Modal isOpen={modalOn} setIsOpen={setModalOn} empresa={empresa?.nombre} />
       <div className='bg-white lg:mt-0 mt-4 lg:w-1/2 w-4/5 lg:h-form h-full rounded-lg shadow-boton flex flex-col'>
         <div className='h-1/3  flex items-center justify-start gap-x-2'>
