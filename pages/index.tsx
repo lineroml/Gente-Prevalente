@@ -14,19 +14,19 @@ const Home = () => {
           ruta=''
           source='/img/card-indicadores.svg'
           titulo='Indicadores'
-          minitext='2 solicitudes sin tratar'
+          minitext='Visitado por última vez: 31/01/2020'
         />
         <Card
           ruta=''
           source='/img/card-empleados.svg'
           titulo='Inscripción de empleados en empresas'
-          minitext='2 solicitudes sin tratar'
+          minitext='3 usuarios sin empresa registrada'
         />
         <Card
           ruta=''
           source='/img/card-usuarios.svg'
           titulo='Gestión de usuarios'
-          minitext='2 solicitudes sin tratar'
+          minitext='532 usuarios activos en la plataforma'
         />
       </div>
     </div>
