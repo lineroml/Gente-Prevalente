@@ -9,10 +9,11 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
   link: from([
     new HttpLink({
-      uri: 'http://localhost:3000/api/graphql',
+      uri: 'https://gente-prevalente-qwoecnkdv-lineroml.vercel.app/api/graphql',
     }),
   ]),
 });
+
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ApolloProvider client={client}>
