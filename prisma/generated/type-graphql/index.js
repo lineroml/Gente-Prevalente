@@ -27,9 +27,11 @@ const crudResolversImport = __importStar(require("./resolvers/crud/resolvers-cru
 __exportStar(require("./enums"), exports);
 __exportStar(require("./models"), exports);
 __exportStar(require("./resolvers/crud"), exports);
+exports.crudResolvers = Object.values(crudResolversImport);
 __exportStar(require("./resolvers/inputs"), exports);
 __exportStar(require("./resolvers/outputs"), exports);
 __exportStar(require("./enhance"), exports);
 __exportStar(require("./scalars"), exports);
-exports.crudResolvers = Object.values(crudResolversImport);
-exports.resolvers = [...exports.crudResolvers];
+exports.resolvers = [
+    ...exports.crudResolvers,
+];
