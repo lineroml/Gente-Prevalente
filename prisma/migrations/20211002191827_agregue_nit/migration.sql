@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE "Enterprise" ADD COLUMN     "NIT" TEXT NOT NULL DEFAULT E'NIT';

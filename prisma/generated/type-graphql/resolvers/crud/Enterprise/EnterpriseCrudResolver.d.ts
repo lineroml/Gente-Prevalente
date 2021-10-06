@@ -1,0 +1,31 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateEnterpriseArgs } from "./args/AggregateEnterpriseArgs";
+import { CreateEnterpriseArgs } from "./args/CreateEnterpriseArgs";
+import { CreateManyEnterpriseArgs } from "./args/CreateManyEnterpriseArgs";
+import { DeleteEnterpriseArgs } from "./args/DeleteEnterpriseArgs";
+import { DeleteManyEnterpriseArgs } from "./args/DeleteManyEnterpriseArgs";
+import { FindFirstEnterpriseArgs } from "./args/FindFirstEnterpriseArgs";
+import { FindManyEnterpriseArgs } from "./args/FindManyEnterpriseArgs";
+import { FindUniqueEnterpriseArgs } from "./args/FindUniqueEnterpriseArgs";
+import { GroupByEnterpriseArgs } from "./args/GroupByEnterpriseArgs";
+import { UpdateEnterpriseArgs } from "./args/UpdateEnterpriseArgs";
+import { UpdateManyEnterpriseArgs } from "./args/UpdateManyEnterpriseArgs";
+import { UpsertEnterpriseArgs } from "./args/UpsertEnterpriseArgs";
+import { Enterprise } from "../../../models/Enterprise";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateEnterprise } from "../../outputs/AggregateEnterprise";
+import { EnterpriseGroupBy } from "../../outputs/EnterpriseGroupBy";
+export declare class EnterpriseCrudResolver {
+    enterprise(ctx: any, info: GraphQLResolveInfo, args: FindUniqueEnterpriseArgs): Promise<Enterprise | null>;
+    findFirstEnterprise(ctx: any, info: GraphQLResolveInfo, args: FindFirstEnterpriseArgs): Promise<Enterprise | null>;
+    enterprises(ctx: any, info: GraphQLResolveInfo, args: FindManyEnterpriseArgs): Promise<Enterprise[]>;
+    createEnterprise(ctx: any, info: GraphQLResolveInfo, args: CreateEnterpriseArgs): Promise<Enterprise>;
+    createManyEnterprise(ctx: any, info: GraphQLResolveInfo, args: CreateManyEnterpriseArgs): Promise<AffectedRowsOutput>;
+    deleteEnterprise(ctx: any, info: GraphQLResolveInfo, args: DeleteEnterpriseArgs): Promise<Enterprise | null>;
+    updateEnterprise(ctx: any, info: GraphQLResolveInfo, args: UpdateEnterpriseArgs): Promise<Enterprise | null>;
+    deleteManyEnterprise(ctx: any, info: GraphQLResolveInfo, args: DeleteManyEnterpriseArgs): Promise<AffectedRowsOutput>;
+    updateManyEnterprise(ctx: any, info: GraphQLResolveInfo, args: UpdateManyEnterpriseArgs): Promise<AffectedRowsOutput>;
+    upsertEnterprise(ctx: any, info: GraphQLResolveInfo, args: UpsertEnterpriseArgs): Promise<Enterprise>;
+    aggregateEnterprise(ctx: any, info: GraphQLResolveInfo, args: AggregateEnterpriseArgs): Promise<AggregateEnterprise>;
+    groupByEnterprise(ctx: any, info: GraphQLResolveInfo, args: GroupByEnterpriseArgs): Promise<EnterpriseGroupBy[]>;
+}
