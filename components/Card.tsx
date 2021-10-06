@@ -14,7 +14,7 @@ const Card = ({ source, titulo, minitext, ruta }) => {
       </div>
       <div className='h-full'>
         <div className='h-5/6 border-b-2 flex justify-end'>
-          <div className='sm:w-full w-4/6 lg:text-3xl sm:h-1/2 h-full text-med text-grisoscuro px-5 lg:py-0 py-2 self-end'>
+          <div className='sm:w-full w-4/6 lg-extra:text-3xl sm:h-1/2 h-full text-med text-grisoscuro px-5 lg:py-0 py-2 self-end'>
             {titulo}
           </div>
         </div>
@@ -22,7 +22,9 @@ const Card = ({ source, titulo, minitext, ruta }) => {
           <div className='pl-3 self-center'>
             <NextImage src='/img/clock.svg' width='16' height='16'></NextImage>
           </div>
-          <div className='pl-2 lg:w-1/3 w-full text-grisclaro font-normal text-xs'>{minitext}</div>
+          <div className='pl-2 lg-extra:w-1/3 w-full text-grisclaro font-normal text-xs'>
+            {minitext}
+          </div>
         </div>
       </div>
     </div>
