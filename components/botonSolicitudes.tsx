@@ -76,7 +76,7 @@ const Boton = ({ aceptar, label, empresa, setEmpresas, isDisabled }) => {
       <div className='flex h-full'>
         <div className={`${loading ? 'hidden' : 'flex'} pl-3`}>
           <NextImage
-            src={`/img/${aceptar ? 'aceptar' : 'rechazar'}.svg`}
+            src={`/img/icon-boton/${aceptar ? 'aceptar' : 'rechazar'}.svg`}
             width='30'
             height='34'
           ></NextImage>
@@ -84,7 +84,7 @@ const Boton = ({ aceptar, label, empresa, setEmpresas, isDisabled }) => {
         <div className={`${loading ? 'flex' : 'hidden'} pl-3`}>
           <NextImage
             className='animate-spin'
-            src={`/img/spin.svg`}
+            src={`/img/icon-boton/spin.svg`}
             width='30'
             height='34'
           ></NextImage>

@@ -1,8 +1,8 @@
 import NextImage from 'next/image';
-import InputEmpresa from './InputEmpresa';
-import Boton from './Boton';
-import Documento from './Documento';
-import Modal from './Modal';
+import InputEmpresa from './inputEmpresa';
+import Boton from './botonSolicitudes';
+import Documento from './docACargar';
+import Modal from './modalDocs';
 import { useState } from 'react';
 
 const FormEmpresa = ({ empresa, setEmpresas }) => {
@@ -45,7 +45,7 @@ const FormEmpresa = ({ empresa, setEmpresas }) => {
           >
             <div className='flex'>
               <div className='pt-3 pl-1'>
-                <NextImage src='/img/boton-clip.svg' width='30' height='34'></NextImage>
+                <NextImage src='/img/icon-boton/clip.svg' width='30' height='34'></NextImage>
               </div>
               <div className='pl-2 text-lg font-bold self-center'>Ver archivos adjuntos</div>
             </div>

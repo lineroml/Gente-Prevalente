@@ -1,10 +1,10 @@
-import HeaderDesktop from 'components/headerDesktop';
-import HeaderMobile from 'components/headerMobile';
+import HeaderDesktop from 'components/header/headerDesktop';
+import HeaderMobile from 'components/header/headerMobile';
 
 const Layout = ({ children }) => {
   return (
     <div className='bg-generalBg'>
-      <div className=' h-screen '>
+      <div className=' h-screen'>
         <div className='h-header'>
           <HeaderMobile />
           <HeaderDesktop />

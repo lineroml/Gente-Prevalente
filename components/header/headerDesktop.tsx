@@ -15,7 +15,7 @@ const HeaderDesktop = () => {
         <div className='w-header2 text-center '>
           <NextImage
             className='block '
-            src='/img/search.svg'
+            src='/img/icon-header/search.svg'
             width='16px'
             height='16px'
           ></NextImage>
@@ -28,7 +28,7 @@ const HeaderDesktop = () => {
         <div className='flex flex-nowrap w-header3 justify-center place-items-center font-bold'>
           <HeaderItem
             aditionalClassName='justify-center'
-            source='/img/admin.svg'
+            source='/img/icon-header/admin.svg'
             width='25px'
             height='19.93px'
             text='Administración'
@@ -41,7 +41,7 @@ const HeaderDesktop = () => {
         <div className='flex flex-nowrap w-header4 justify-center place-items-center'>
           <HeaderItem
             aditionalClassName='justify-center'
-            source='/img/empleo.svg'
+            source='/img/icon-header/empleo.svg'
             width='20px'
             height='17.5px'
             text='Empleo'
@@ -52,7 +52,7 @@ const HeaderDesktop = () => {
         </div>
         <HeaderItem
           aditionalClassName='w-header5 justify-center'
-          source='/img/cv.svg'
+          source='/img/icon-header/cv.svg'
           width='17px'
           height='23px'
           text='Mi CV'
@@ -66,7 +66,11 @@ const HeaderDesktop = () => {
             text='Daniel'
           />
           <div className='pl-2 '>
-            <NextImage src='/img/downarrow.svg' width='17.55px' height='10.87px'></NextImage>
+            <NextImage
+              src='/img/icon-header/downarrow.svg'
+              width='17.55px'
+              height='10.87px'
+            ></NextImage>
           </div>
         </div>
       </div>

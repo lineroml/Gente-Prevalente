@@ -1,16 +1,14 @@
-import Boton from 'components/Boton';
-import FormEmpresa from 'components/FormEmpresa';
+import Boton from 'components/botonSolicitudes';
+import FormEmpresa from 'components/formEmpresa';
 import router from 'next/router';
 import NextImage from 'next/image';
 import { useState } from 'react';
 import safeJsonStringify from 'safe-json-stringify';
-import { gql } from 'apollo-server-core';
 import { useEffect } from 'react';
 import { prisma } from 'pages/api/graphql';
 
 export async function getServerSideProps() {
   let enterprises;
-  console.log('entró');
   try {
     enterprises = await prisma.enterprise.findMany();
     console.log('empresas: ', enterprises);
@@ -26,20 +24,10 @@ interface enterpriseInterface {
   enterprises: any;
 }
 
-const mutacion = gql`
-  mutation Mutation($Data: EnterpriseUpdateInput!, $Where: EnterpriseWhereUniqueInput!) {
-    updateEnterprise(data: $Data, where: $Where) {
-      isApproved
-      id
-    }
-  }
-`;
-
 const SolicitudesEmpresas = ({ enterprises }: enterpriseInterface) => {
   let maxState = enterprises.length - 1;
   const [state, setState] = useState(0);
   const [empresas, setEmpresas] = useState(enterprises);
-  const [numAprobados, setNumAprobados] = useState(0);
 
   const nextPage = (e: any) => {
     e.preventDefault();
@@ -54,26 +42,6 @@ const SolicitudesEmpresas = ({ enterprises }: enterpriseInterface) => {
       setState(state - 1);
     }
   };
-  /*
-  useEffect(() => {
-    let aprobados = 0;
-    let empresasNoAprobadas: any = [];
-    console.log('Ejecuto useEffect');
-    empresas.forEach((empresa) => {
-      if (empresa.isApproved) {
-        aprobados = aprobados + 1;
-      }
-    });
-    setNumAprobados(aprobados);
-    console.log(numAprobados);
-
-    empresas.forEach((empresa) => {
-      if (!empresa.isApproved) {
-        empresasNoAprobadas.push(empresa);
-      }
-    });
-  }, [empresas]);
-  */
 
   const refreshData = () => {
     router.replace(router.asPath);
@@ -102,16 +70,16 @@ const SolicitudesEmpresas = ({ enterprises }: enterpriseInterface) => {
               onClick={(e) => previousPage(e)}
               className={`${state == 0 ? 'opacity-50' : 'opacity-100 cursor-pointer'}`}
             >
-              <NextImage src='/img/prevarrow.svg' width='38' height='38'></NextImage>{' '}
+              <NextImage src='/img/icon-boton/prevarrow.svg' width='38' height='38'></NextImage>{' '}
             </div>
             <div className='-mt-2 text-xs font-normal text-counterEmpresa'>
-              Empresa 2 de 4 pendiente por aprobación
+              Empresa {state + 1} de {maxState + 1} pendientes por aprobación
             </div>
             <div
               onClick={(e) => nextPage(e)}
               className={`${state == maxState ? 'opacity-50' : 'opacity-100 cursor-pointer'}`}
             >
-              <NextImage src='/img/nextarrow.svg' width='38' height='38'></NextImage>
+              <NextImage src='/img/icon-boton/nextarrow.svg' width='38' height='38'></NextImage>
             </div>
           </div>
         </div>
