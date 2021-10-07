@@ -1,5 +1,5 @@
-import HeaderDesktop from 'components/header/headerDesktop';
-import HeaderMobile from 'components/header/headerMobile';
+import HeaderDesktop from './header/headerDesktop';
+import HeaderMobile from './header/headerMobile';
 
 const Layout = ({ children }) => {
   return (
