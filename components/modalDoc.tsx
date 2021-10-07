@@ -1,5 +1,4 @@
-import Documento from './Documento';
-import { useState } from 'react';
+import Documento from './docDescargable';
 import { styled, Box } from '@mui/system';
 import ModalUnstyled from '@mui/core/ModalUnstyled';
 

@@ -1,8 +1,8 @@
 import NextImage from 'next/image';
-import InputEmpresa from './InputEmpresa';
-import Boton from './Boton';
-import Documento from './Documento';
-import Modal from './Modal';
+import InputEmpresa from './inputForm';
+import Boton from './botonAceptarRechazar';
+import Documento from './docDescargable';
+import Modal from './modalDoc';
 import { useState } from 'react';
 
 const FormEmpresa = ({ empresa, setEmpresas }) => {

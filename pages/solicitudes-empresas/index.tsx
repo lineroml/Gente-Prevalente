@@ -1,5 +1,5 @@
-import Boton from 'components/Boton';
-import FormEmpresa from 'components/FormEmpresa';
+import Boton from 'components/botonAceptarRechazar';
+import FormEmpresa from 'components/formularioEmpresa';
 import router from 'next/router';
 import NextImage from 'next/image';
 import { useState } from 'react';
