@@ -102,7 +102,7 @@ const SolicitudesEmpresas = ({ enterprises }: enterpriseInterface) => {
               onClick={(e) => previousPage(e)}
               className={`${state == 0 ? 'opacity-50' : 'opacity-100 cursor-pointer'}`}
             >
-              <NextImage src='/img/prevarrow.svg' width='38' height='38'></NextImage>{' '}
+              <NextImage src='/img/icons-button/prevarrow.svg' width='38' height='38'></NextImage>{' '}
             </div>
             <div className='-mt-2 text-xs font-normal text-counterEmpresa'>
               Empresa 2 de 4 pendiente por aprobación
@@ -111,7 +111,7 @@ const SolicitudesEmpresas = ({ enterprises }: enterpriseInterface) => {
               onClick={(e) => nextPage(e)}
               className={`${state == maxState ? 'opacity-50' : 'opacity-100 cursor-pointer'}`}
             >
-              <NextImage src='/img/nextarrow.svg' width='38' height='38'></NextImage>
+              <NextImage src='/img/icons-button/nextarrow.svg' width='38' height='38'></NextImage>
             </div>
           </div>
         </div>

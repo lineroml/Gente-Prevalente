@@ -7,7 +7,7 @@ const HeaderDesktop = () => {
       <div className='flex w-full bg-grisHeader h-full items-center shadow-2xl'>
         <HeaderItem
           aditionalClassName='w-header1 justify-center font-bold'
-          source='/img/logogp.svg'
+          source='/img/icons-header/logogp.svg'
           width='70px'
           height='70px'
           text='Gente Prevalente'
@@ -15,7 +15,7 @@ const HeaderDesktop = () => {
         <div className='w-header2 text-center '>
           <NextImage
             className='block '
-            src='/img/search.svg'
+            src='/img/icons-header/search.svg'
             width='16px'
             height='16px'
           ></NextImage>
@@ -28,31 +28,35 @@ const HeaderDesktop = () => {
         <div className='flex flex-nowrap w-header3 justify-center place-items-center font-bold'>
           <HeaderItem
             aditionalClassName='justify-center'
-            source='/img/admin.svg'
+            source='/img/icons-header/admin.svg'
             width='25px'
             height='19.93px'
             text='Administración'
           />
           <div className='pb-2'>
-            <NextImage src='/img/mininotif.svg' width='11px' height='11px'></NextImage>
+            <NextImage src='/img/icons-header/mininotif.svg' width='11px' height='11px'></NextImage>
           </div>
         </div>
 
         <div className='flex flex-nowrap w-header4 justify-center place-items-center'>
           <HeaderItem
             aditionalClassName='justify-center'
-            source='/img/empleo.svg'
+            source='/img/icons-header/empleo.svg'
             width='20px'
             height='17.5px'
             text='Empleo'
           />
           <div className='pl-2'>
-            <NextImage src='/img/downarrow.svg' width='17.55px' height='10.87px'></NextImage>
+            <NextImage
+              src='/img/icons-header/downarrow.svg'
+              width='17.55px'
+              height='10.87px'
+            ></NextImage>
           </div>
         </div>
         <HeaderItem
           aditionalClassName='w-header5 justify-center'
-          source='/img/cv.svg'
+          source='/img/icons-header/cv.svg'
           width='17px'
           height='23px'
           text='Mi CV'
@@ -66,7 +70,11 @@ const HeaderDesktop = () => {
             text='Daniel'
           />
           <div className='pl-2 '>
-            <NextImage src='/img/downarrow.svg' width='17.55px' height='10.87px'></NextImage>
+            <NextImage
+              src='/img/icons-header/downarrow.svg'
+              width='17.55px'
+              height='10.87px'
+            ></NextImage>
           </div>
         </div>
       </div>

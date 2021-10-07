@@ -20,7 +20,7 @@ const Card = ({ source, titulo, minitext, ruta }) => {
         </div>
         <div className='h-1/6 flex items-center'>
           <div className='pl-3 self-center'>
-            <NextImage src='/img/clock.svg' width='16' height='16'></NextImage>
+            <NextImage src='/img/icons-card/clock.svg' width='16' height='16'></NextImage>
           </div>
           <div className='pl-2 lg-extra:w-1/3 w-full text-grisclaro font-normal text-xs'>
             {minitext}

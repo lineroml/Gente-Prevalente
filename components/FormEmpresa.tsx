@@ -45,7 +45,11 @@ const FormEmpresa = ({ empresa, setEmpresas }) => {
           >
             <div className='flex'>
               <div className='pt-3 pl-1'>
-                <NextImage src='/img/boton-clip.svg' width='30' height='34'></NextImage>
+                <NextImage
+                  src='/img/icons-button/boton-clip.svg'
+                  width='30'
+                  height='34'
+                ></NextImage>
               </div>
               <div className='pl-2 text-lg font-bold self-center'>Ver archivos adjuntos</div>
             </div>
