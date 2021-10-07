@@ -5,7 +5,7 @@ const HeaderMobile = () => {
     <div className='md:hidden h-full'>
       <div className='flex w-full bg-grisHeader h-full'>
         <HeaderItem
-          aditionalClassName='w-1/2'
+          aditionalClassName='w-1/2 font-bold'
           source='/img/icons-header/logogp.svg'
           width='70px'
           height='70px'
